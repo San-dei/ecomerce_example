@@ -1,11 +1,7 @@
 import React from "react";
 import Render_fav from "@/ul/(Favorits)/Render_fav";
 
-/**
- * Retorna un elemento JSX que renderiza productos favoritos
- * @returns {JSX.Element} - Retorna un elemento JSX
- */
-export const Favorits:React.FC = ():JSX.Element => {
+const Favorits = () => {
   return (
     <>
       <Render_fav />
