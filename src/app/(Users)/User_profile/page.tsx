@@ -1,3 +1,4 @@
+import React from "react";
 import Profile from "@/ul/Profile/Profile"
 
 const User_profile = () => {

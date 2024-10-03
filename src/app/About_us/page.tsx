@@ -2,6 +2,7 @@
  * Retorna informacion en formato JSX.
  * @returns {JSX.Element} - Retorna un elemento JSX.
  */
+import React from "react";
 
 const About_us:React.FC = ():JSX.Element => {
   return <>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum faucibus iaculis. Sed vestibulum, risus in euismod congue, nibh nibh feugiat elit, ut sollicitudin nulla diam ut risus. Suspendisse potenti. Curabitur sem dui, luctus quis ultricies vel, luctus eu neque. Ut orci nisi, maximus id tellus et, euismod efficitur quam. Integer quis scelerisque leo. Suspendisse posuere congue lacus, quis eleifend velit accumsan quis. Nulla leo lacus, pellentesque in ultricies nec, ornare sit amet lorem. Cras consequat tempor mauris, sit amet bibendum lectus dignissim sed. Sed dictum volutpat vehicula. Pellentesque ac libero at metus pretium consequat vitae in orci. Mauris mattis sagittis diam id lacinia.

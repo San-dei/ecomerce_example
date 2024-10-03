@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/showproductshopping.module.css";
 
 const Buy: React.FC = (): JSX.Element => {

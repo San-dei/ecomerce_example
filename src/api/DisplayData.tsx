@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Store } from "@/interfaces/barril";
 import GenerateData from "@/ul/(Api)/GenerateData";
 

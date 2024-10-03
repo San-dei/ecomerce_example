@@ -18,8 +18,10 @@ const Login = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const storedUserString = localStorage.getItem("user");
+    const storedUser = storedUserString ? JSON.parse(storedUserString) : null;
     if (
+      storedUser &&
       storedUser.email === credentials.email &&
       storedUser.contrasena === credentials.contrasena
     ) {

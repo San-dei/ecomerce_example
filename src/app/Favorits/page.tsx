@@ -1,3 +1,4 @@
+import React from "react";
 import Render_fav from "@/ul/(Favorits)/Render_fav";
 
 /**

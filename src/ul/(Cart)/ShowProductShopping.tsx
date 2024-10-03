@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import useProductStore from "@/store/principal"; // Importa el hook personalizado para el estado del almacén de productos
 import Image from "next/image"; // Importa la componente Image de Next.js
 import ProductQuanty from "./ProductQuanty"; // Importa el componente ProductQuanty

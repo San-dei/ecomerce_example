@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../../../styles/forgetpassword.module.css";
 
 const Forget_password = () => {

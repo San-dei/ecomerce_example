@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { OtherProperties } from "@/store/principal";
 import Link from "next/link";
 import Image from "next/image";

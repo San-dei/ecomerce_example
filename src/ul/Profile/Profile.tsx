@@ -11,8 +11,9 @@ const Profile = () => {
 
   useEffect(() => {
     // Recuperar los datos del usuario de localStorage al cargar el componente
-    const storedUser = JSON.parse(localStorage.getItem('user'));
-    if (storedUser) {
+    const storedUserString = localStorage.getItem('user');
+    if (storedUserString) {
+      const storedUser = JSON.parse(storedUserString);
       setUser(storedUser);
     }
   }, []);

@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import useProductStore, { OtherProperties } from "@/store/principal";
 import styles from "../../styles/showproductshopping.module.css";
 

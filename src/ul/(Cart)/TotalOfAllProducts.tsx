@@ -1,3 +1,4 @@
+import React from "react";
 import useProductStore from "@/store/principal";
 import styles from "../../styles/showproductshopping.module.css";
 import Buy from "@/components/Buy";

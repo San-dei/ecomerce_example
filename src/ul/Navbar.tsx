@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import NavSearch from "@/components/NavSearch"; // Importa el componente NavSearch
 import Link from "next/link"; // Importa el componente Link de Next.js
 import { useState } from "react";
