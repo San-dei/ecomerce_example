@@ -4,7 +4,7 @@ import { OtherProperties } from "@/store/principal";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, ChangeEvent } from "react";
-import styles from "../styles/navsearch.module.css"
+import styles from "../styles/navsearch.module.css";
 
 /**
  * Componente de barra de búsqueda para la navegación.
@@ -58,19 +58,20 @@ const NavSearch: React.FC = (): JSX.Element => {
         className={styles.navsearch_input}
       />
 
-      {showResults.map((item, index) => (
-        <div key={index}>
-          <Link href={`/View_more/${item.id}`}>
-            <Image
-              src={item.image}
-              alt="Imagen de búsqueda"
-              height={20}
-              width={20}
-            />
-            {item.title}
-          </Link>
-        </div>
-      ))}
+      <div className={styles.conteiner_all}>
+        {showResults.map((item, index) => (
+          <div key={index} className={styles.conteiner_searching}>
+            <Link
+              href={`/View_more/${item.id}`}
+              className={styles.conteiner_searching_link}
+            >
+              <div className={styles.conteiner_searching_result}>
+                {item.title}
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

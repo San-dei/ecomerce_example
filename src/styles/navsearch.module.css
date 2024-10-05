@@ -1,52 +1,85 @@
 .navsearch {
-  position: relative; /* Para posicionar los resultados correctamente */
-  width: 100%; /* Asegura que la barra de búsqueda ocupe todo el ancho */
+  margin-right: 2rem;
+  position: relative;
+  width: 100%;
 }
 
 .navsearch_input {
-  width: 100%; /* Campo de búsqueda ocupa todo el ancho disponible */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde gris claro */
-  border-radius: 5px; /* Bordes redondeados */
-  outline: none; /* Sin borde al enfocar */
-  font-size: 16px; /* Tamaño de fuente */
-  transition: border-color 0.3s; /* Transición suave para el borde */
+  max-width: 15rem;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
 }
 
 .navsearch_input:focus {
-  border-color: #00adb5; /* Cambia el color del borde al enfocar */
+  border-color: #00adb5;
 }
 
 .results_container {
-  position: absolute; /* Posiciona los resultados de búsqueda */
-  top: 100%; /* Coloca los resultados justo debajo de la barra de búsqueda */
+  position: absolute;
+  top: 100%;
   left: 0;
-  right: 0; /* Alineación completa */
-  background-color: white; /* Fondo blanco para los resultados */
-  border: 1px solid #ccc; /* Borde gris claro */
-  border-radius: 5px; /* Bordes redondeados */
-  z-index: 1000; /* Asegura que los resultados estén encima de otros elementos */
-  max-height: 300px; /* Altura máxima para evitar que se desborde */
-  overflow-y: auto; /* Agrega barra de desplazamiento si es necesario */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+  max-height: 300px; /* Limita la altura máxima */
+  overflow-y: auto;  /* Habilita el desplazamiento vertical */
+  padding: 10px;
 }
 
 .result_item {
-  padding: 10px; /* Espaciado interno */
-  display: flex; /* Usa flex para alinear imagen y texto */
-  align-items: center; /* Centra verticalmente */
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .result_item:hover {
-  background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+  background-color: #f0f0f0;
 }
 
 .result_link {
-  text-decoration: none; /* Sin subrayado */
-  color: black; /* Color de texto negro */
-  display: flex; /* Para alinear imagen y texto */
-  align-items: center; /* Centra verticalmente */
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
 }
 
 .result_link img {
-  margin-right: 10px; /* Espaciado entre imagen y texto */
+  margin-right: 10px;
+}
+
+.conteiner_all {
+  border-radius: 5px;
+  padding-right: 5px;
+  margin-top: 0.5rem;
+  background-color: #657392;
+  position: absolute;
+  z-index: 999;
+  max-width: 15rem;
+  max-height: 200px; /* Limita la altura de los resultados */
+  overflow-y: auto; /* Agrega la barra de desplazamiento vertical */
+  border: 1px solid var(--color-cuaternario);
+}
+
+.conteiner_searching {
+  display: flex;
+  align-items: center;
+}
+
+.conteiner_searching_link {
+  text-decoration: none;
+  color: var(--color-cuaternario);
+}
+
+.conteiner_searching_result {
+  margin-top: 0.5rem;
+  color: aliceblue;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
