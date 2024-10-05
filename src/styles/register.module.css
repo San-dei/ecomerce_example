@@ -1,40 +1,45 @@
-.register_conteiner{
-  width: 100%;
-  height: auto;
+.register_conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Para centrar verticalmente */
+  background-color: var(--color-primario);
+  padding: 20px; /* Espaciado alrededor del formulario */
 }
 
 .register {
+  background-color: var(--color-secundario);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: var(--gris-claro);
+  max-width: 400px; /* Ancho máximo del formulario */
 }
 
-.register_f{
-  width: 69%;
-  max-width: 400px;
-  padding: 7px;
-  margin: 8px 0;
-  border: 1px solid var(--gris-oscuro);
-  border-radius: 4px;
+.register_f {
+  width: 100%; /* Asegura que los campos llenen el ancho del formulario */
+  margin-bottom: 15px; /* Espaciado entre campos */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid var(--color-ternario);
+  border-radius: 5px;
+  font-size: 16px; /* Tamaño de fuente adecuado */
 }
 
-.register_submit {
-  width: 80%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 20px 0;
+.register_f:focus {
+  border-color: var(--color-cuaternario); /* Cambio de color en foco */
+  outline: none; /* Quita el contorno predeterminado */
+}
+
+.button {
+  background-color: var(--color-cuaternario);
+  color: var(--fuente-clara);
   border: none;
-  border-radius: 4px;
-  background-color: var(--negro);
-  color: var(--gris-claro);
-  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-.register_submit:hover {
-  background-color: var(--gris-oscuro);
+.button:hover {
+  background-color: var(--color-ternario); /* Cambio de color en hover */
 }

@@ -1,0 +1,27 @@
+.aboutus_container {
+  display: flex;
+  flex-direction: column; /* Organiza en columnas */
+  justify-content: center;
+  align-items: center; /* Centra el contenido */
+  padding: 20px; /* Espaciado alrededor del contenedor */
+  background-color: #f9f9f9; /* Fondo suave */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: auto; /* Centra el contenedor en la página */
+}
+
+.title {
+  font-size: 2rem; /* Tamaño de fuente más grande para el título */
+  color: #1b1a55; /* Color del título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  text-align: center; /* Centra el texto */
+}
+
+.description {
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+  margin-bottom: 15px; /* Espacio entre los párrafos */
+  color: #333; /* Color del texto */
+  text-align: justify; /* Justifica el texto */
+}

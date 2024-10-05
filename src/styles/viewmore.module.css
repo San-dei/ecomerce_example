@@ -1,79 +1,110 @@
 .viewMore {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--gris-claro);
+  justify-content: center; /* Centra el contenido */
+  padding: 20px; /* Espaciado alrededor */
+  background-color: #f9f9f9; /* Fondo suave */
 }
 
 .viewMore_card {
-  background-color: var(--white);
-  border: 1px solid var(--negro);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  max-width: 80%;
+  display: flex;
+  flex-direction: column; /* Coloca la imagen y la info verticalmente */
+  align-items: center; /* Centra los elementos */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  background-color: #fff; /* Fondo blanco para la tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.2s; /* Efecto de transición */
+}
+
+.viewMore_card:hover {
+  transform: scale(1.02); /* Efecto de ampliación al pasar el ratón */
 }
 
 .viewMore_info {
-  margin-top: 20px;
-  font-size: 16px;
-  color: var(--negro);
+  text-align: center; /* Centra el texto */
+  margin-top: 10px; /* Espaciado arriba */
 }
 
-.viewMore_description {
-  margin: 1rem 0;
+.viewMore_title {
+  font-size: 1.5rem; /* Tamaño de fuente más grande para el título */
+  color: #1b1a55; /* Color del título */
+  font-weight: bold; /* Negrita */
 }
 
 .viewMore_price {
-  margin: 1rem 0;
+  font-size: 1.2rem; /* Tamaño de fuente para el precio */
+  color: #00adb5; /* Color del precio */
+  margin-top: 5px; /* Espaciado arriba */
+}
+
+.viewMore_description {
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  color: #333; /* Color del texto */
+  margin-top: 10px; /* Espaciado arriba */
 }
 
 .viewMore_buttons {
-  margin-top: 20px;
+  margin-top: 20px; /* Espaciado superior para los botones */
 }
 
 .viewMore_atras {
-  color: var(--negro);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.viewMore_atras:hover {
-  color: var(---negro);
-}
-
-.button_core{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
+  align-items: center; /* Centra el ícono */
+  margin-top: 20px; /* Espaciado arriba */
+  text-decoration: none; /* Quita el subrayado */
+  color: #1b1a55; /* Color del enlace */
+  font-weight: bold; /* Negrita */
 }
 
-.button_addfavoritos,
+.viewMore_svg_atras {
+  margin-right: 5px; /* Espaciado a la derecha del ícono */
+}
+
+/* Contenedor principal para los botones */
+.button_core {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Espacio entre los botones */
+  padding: 10px;
+  margin: 15px 0;
+}
+
+/* Botón para agregar al carrito */
 .button_addagregar {
+  background-color: #1b1a55; /* Color de fondo principal */
+  color: #ffffff; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 16px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  letter-spacing: 1px;
-  border: 0.1px solid var(--gris-oscuro);
-  height: 2rem;
-  width: 6rem;
+  gap: 8px; /* Espacio entre el icono y el texto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.button_addagregar:hover {
+  background-color: #070f2b; /* Color más oscuro al hacer hover */
+}
+
+/* Botón para añadir a favoritos */
+.button_addfavoritos {
+  background-color: #535c91; /* Color de fondo para el botón de favoritos */
+  color: #ffffff;
+  border: none;
   border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.viewMore_svg_atras{
-  border-radius: 5px;
-  height: 1.6rem;
-  width: 1.6rem;
-  background-color: var(--gris-oscuro);
-}
-
-.viewMore_atras{
-  margin-left: 1rem;
+.button_addfavoritos:hover {
+  background-color: #1b1a55; /* Color más oscuro al hacer hover */
 }

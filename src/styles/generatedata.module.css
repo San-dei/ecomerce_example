@@ -1,39 +1,31 @@
-.card_position{
-  width: 100%;
-  height: auto;
+.card_position {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples líneas */
+  justify-content: space-around; /* Espacio entre las tarjetas */
 }
 
-.card{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 5px;
-  width: 50vw;
-  height: 18rem;
-  margin: 0.5rem;
-  border: .1px solid var(--gris-oscuro);
+.card {
+  background-color: white; /* Color de fondo blanco */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  margin: 10px; /* Espacio entre tarjetas */
+  padding: 10px; /* Espacio interno */
+  width: 250px; /* Ancho fijo */
+  height: 350px; /* Altura fija para todas las tarjetas */
+  display: flex; /* Usar flexbox para alinear el contenido */
+  flex-direction: column; /* Organizar el contenido en columna */
+  justify-content: space-between; /* Espacio entre elementos */
+  text-align: center; /* Centra el texto y el contenido */
 }
 
-.card_descripcion{
-  color: var(--negro);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
+.card_descripcion {
+  text-decoration: none; /* Sin subrayado en el enlace */
+  color: black; /* Color de texto negro */
+  flex-grow: 1; /* Permitir que esta sección crezca para llenar el espacio disponible */
 }
 
-.card_buttons{
-  margin-top: 1rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card_buttons {
+  display: flex; /* Usa flex para alinear botones */
+  justify-content: center; /* Centra los botones */
 }
-

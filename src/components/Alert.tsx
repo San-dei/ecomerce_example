@@ -11,7 +11,9 @@ const Alert: React.FC<AlertProps> = ({ message, onClose }) => {
     <div className={styles.alertOverlay}>
       <div className={styles.alertBox}>
         <p>{message}</p>
-        <button className={styles.closeButton} onClick={onClose}>Cerrar</button>
+        <button className={styles.closeButton} onClick={onClose}>
+          Cerrar
+        </button>
       </div>
     </div>
   );

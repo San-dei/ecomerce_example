@@ -37,7 +37,7 @@ const getData = async (): Promise<Store[]> => {
  * Componente de React que obtiene y muestra datos.
  * @returns {Promise<JSX.Element>} - Retorna una promesa que se resolverá con un elemento de JSX.
  */
-const DisplayData: React.FC = async () : Promise<JSX.Element> => {
+const DisplayData: React.FC = async () => {
   const newData = await getData();
   return (
     <>

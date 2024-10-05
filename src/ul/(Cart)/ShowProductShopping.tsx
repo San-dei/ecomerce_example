@@ -18,15 +18,15 @@ const ShowProductShopping: React.FC = () => {
   // Verifica si el carrito está vacío
   return cart.length <= 0 ? (
     <>
-      <div>
+      <div className={styles.text}>
         {"El carro está vacío, aún no has comprado nada"}
-        <Link href="/">Ir de compras</Link>
+        <Link href="/"> Ir de compras</Link>
       </div>
     </>
   ) : (
     <>
       {cart.map((item) => (
-        <div key={item.id}>
+        <div key={item.id} className={styles.conteiner_products}>
           <div className={styles.product}>
             <Image
               src={item.image}
@@ -45,7 +45,10 @@ const ShowProductShopping: React.FC = () => {
           </div>
         </div>
       ))}
+      <div className={styles.totalProducts}>
+
     <TotalOfAllProducts />
+      </div>
     </>
   );
 };

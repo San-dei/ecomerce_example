@@ -35,26 +35,30 @@ const Login = () => {
     <>
       <form onSubmit={handleSubmit} className={styles.login_form_conteiner}>
         <div className={styles.login_form}>
-          <label htmlFor="email" className={styles.login_email}>
-            Email
-          </label>
-          <input
-            type="text"
-            id="email"
-            placeholder="Email"
-            onChange={handleChange}
-            className={styles.login_form_email}
-          />
-          <label htmlFor="contrasena" className={styles.login_contrasena}>
-            Contraseña
-          </label>
-          <input
-            type="password"
-            id="contrasena"
-            placeholder="Contraseña"
-            onChange={handleChange}
-            className={styles.login_form_contrasena_ver}
-          />
+          <div className={styles.login_inputs}>
+            <label htmlFor="email" className={styles.login_email}>
+              Email
+            </label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              onChange={handleChange}
+              className={styles.login_form_email}
+            />
+          </div>
+          <div className={styles.login_inputs}>
+            <label htmlFor="contrasena" className={styles.login_contrasena}>
+              Contraseña
+            </label>
+            <input
+              type="password"
+              id="contrasena"
+              placeholder="Contraseña"
+              onChange={handleChange}
+              className={styles.login_form_contrasena_ver}
+            />
+          </div>
         </div>
         <div className={styles.login_btn}>
           <button type="submit" className={styles.login_submit}>
@@ -69,6 +73,7 @@ const Login = () => {
       </form>
     </>
   );
+  
 };
 
 export default Login;

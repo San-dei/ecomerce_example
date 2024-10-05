@@ -1,22 +1,26 @@
 .Cabezera {
   width: 100%;
   padding: 1em;
-  background-color: var(--gris-claro);
-
+  background-color: var(--color-secundario); /* Uso de paleta de colores */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
+
 .Cabezera_btn {
-  display: none;
+  display: none; /* El botón estará oculto por defecto en pantallas grandes */
 }
 
 .Cabezera_svg {
   display: block;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-cuaternario); /* Mejora visual para el SVG */
 }
 
 .Cabezera_nav {
+  display: flex;
 }
 
 .Cabezera_ul {
@@ -29,48 +33,66 @@
 .Cabezera_li {
   list-style: none;
   margin: 0.4em;
-  border-bottom: 0.1px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s ease-in;
 }
 
 .Cabezera_li:hover {
-  border-bottom: 0.1px solid var(--negro);
+  border-bottom: 2px solid var(--color-ternario); /* Resaltado al hacer hover */
+}
+
+.Cabezera_h1{
+  display:flex ;
+  align-items: center;
+}
+
+.Cabezera_b {
+  margin-bottom: .3rem;
+  text-decoration: none;
+  color: var(--color-cuaternario); /* Ajuste a la paleta de colores */
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 .Cabezera_a {
   text-decoration: none;
-  color: var(--negro);
+  color: var(--color-cuaternario); /* Ajuste a la paleta de colores */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.1s ease;
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 768px) {
   .Cabezera_btn {
     display: flex;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 7px 7px 12px #949494;
-    background-color: var(--gris-claro);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: var(--color-secundario);
   }
+
   .Cabezera_svg {
-    border: none;
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
   }
+
   .Cabezera_nav {
-    display: none;
+    display: none; /* Menú oculto por defecto en pantallas pequeñas */
   }
+
   .Cabezera_nav.isActive {
+    display: block; /* Mostrar menú al activarse */
     margin-top: 1rem;
     width: 100%;
-    display: block;
+    text-align: center;
   }
+
   .Cabezera_ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; /* Menú en columna en pantallas pequeñas */
   }
-  
+
   .Cabezera_buscador {
     margin-top: 1rem;
   }

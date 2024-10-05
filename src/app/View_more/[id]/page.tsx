@@ -45,15 +45,16 @@ const View_more: React.FC<Props> = async ({ params }): Promise<JSX.Element> => {
             width={200}
           />
           <div className={styles.viewMore_info}>
-            <div className={satoshi_medium.className}>
+            <div className={`${satoshi_medium.className} ${styles.viewMore_title}`}>
               {display.title}
             </div>
             <div className={styles.viewMore_price}>
-            Precio: ${display.price}
-            <div className={styles.viewMore_description}>
-            Descripcion:<br/>
-            {display.description}
+              Precio: ${display.price}
             </div>
+            <div className={styles.viewMore_description}>
+              Descripción:
+              <br />
+              {display.description}
             </div>
           </div>
           <div className={styles.viewMore_buttons}>
@@ -63,7 +64,7 @@ const View_more: React.FC<Props> = async ({ params }): Promise<JSX.Element> => {
       </div>
 
       <Link href="/" className={styles.viewMore_atras}>
-        <IoIosArrowBack className={styles.viewMore_svg_atras}/>
+        <IoIosArrowBack className={styles.viewMore_svg_atras} />
       </Link>
     </>
   );

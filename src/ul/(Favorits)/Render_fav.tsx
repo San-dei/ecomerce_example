@@ -30,8 +30,11 @@ export const Render_fav: React.FC = () => {
   // Retorna los productos favoritos renderizados
   return favorits.length === 0 ? (
     <>
+    <div className={styles.textFav}>
+
       <div>Aun no haz agregado productos a tu lista de favoritos</div>
-      <Link href="/">ver la tienda</Link>
+      <Link href="/"> ver la tienda</Link>
+    </div>
     </>
   ) : (
     <>

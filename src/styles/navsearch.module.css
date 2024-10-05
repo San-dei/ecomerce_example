@@ -1,11 +1,52 @@
-.navsearch_input{
-  border-radius: 5px;
-  border: .1px solid var(--gris-oscuro);
-  height: 2rem;
-  width: 10rem;
-  transition: width 0.2s ease-in;
+.navsearch {
+  position: relative; /* Para posicionar los resultados correctamente */
+  width: 100%; /* Asegura que la barra de búsqueda ocupe todo el ancho */
 }
 
-.navsearch_input:hover{
-  width: 12rem;
+.navsearch_input {
+  width: 100%; /* Campo de búsqueda ocupa todo el ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  outline: none; /* Sin borde al enfocar */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.navsearch_input:focus {
+  border-color: #00adb5; /* Cambia el color del borde al enfocar */
+}
+
+.results_container {
+  position: absolute; /* Posiciona los resultados de búsqueda */
+  top: 100%; /* Coloca los resultados justo debajo de la barra de búsqueda */
+  left: 0;
+  right: 0; /* Alineación completa */
+  background-color: white; /* Fondo blanco para los resultados */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  z-index: 1000; /* Asegura que los resultados estén encima de otros elementos */
+  max-height: 300px; /* Altura máxima para evitar que se desborde */
+  overflow-y: auto; /* Agrega barra de desplazamiento si es necesario */
+}
+
+.result_item {
+  padding: 10px; /* Espaciado interno */
+  display: flex; /* Usa flex para alinear imagen y texto */
+  align-items: center; /* Centra verticalmente */
+}
+
+.result_item:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}
+
+.result_link {
+  text-decoration: none; /* Sin subrayado */
+  color: black; /* Color de texto negro */
+  display: flex; /* Para alinear imagen y texto */
+  align-items: center; /* Centra verticalmente */
+}
+
+.result_link img {
+  margin-right: 10px; /* Espaciado entre imagen y texto */
 }

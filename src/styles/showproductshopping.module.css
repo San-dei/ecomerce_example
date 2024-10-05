@@ -1,93 +1,162 @@
+/* Contenedor principal para la vista de productos */
+.conteiner_products {
+  display: flex; /* Alinear la imagen y la información del producto horizontalmente */
+  border: 1px solid #9290C3; /* Borde de los productos */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 10px 0; /* Espaciado vertical entre productos */
+  padding: 10px; /* Espaciado interno */
+  background-color: #1B1A55; /* Fondo del contenedor de productos */
+  color: #eeeeee; /* Color del texto */
+  width: calc(100% - 40px); /* Ancho reducido para el contenedor */
+  max-width: 800px; /* Ancho máximo para evitar que se extienda demasiado */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Estructura del producto */
 .product {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border: 1px solid var(--gris-oscuro);
-  border-radius: 8px;
-  background-color: var(--gris-claro);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  display: flex; /* Alinear la imagen y la información del producto horizontalmente */
+  align-items: center; /* Centra verticalmente el contenido */
+  flex-grow: 1; /* Permite que el contenedor del producto crezca */
 }
 
+/* Información del producto */
 .product_info {
-  margin-left: 20px;
-  font-size: 16px;
-  color: var(--negro);
+  flex-grow: 2; /* Ocupar más espacio que la imagen */
+  padding-left: 10px; /* Espacio entre la imagen y la información */
 }
 
+/* Descripción del producto */
 .product_descripcion {
-  margin-bottom: 10px;
-  color: var(--negro);
+  margin: 5px 0; /* Espaciado vertical entre descripciones */
+  font-size: 1.1em; /* Tamaño de fuente ajustado */
 }
 
-.product_conteiner {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.product_quanty {
-  background-color: var(--negro);
-  color: var(--gris-claro);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-.product_quanty:hover {
-  background-color: var(--gris-oscuro);
-}
-
-.product_number {
-  font-size: 16px;
-  color: var(--negro);
-  margin: 0 10px;
-}
-
-.product_delete {
-  background-color: var(--negro);
-  color: var(--gris-claro);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.product_delete:hover {
-  background-color: var(--gris-oscuro);
-}
-
-.total {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--gris-claro);
-  border: 1px solid var(--gris-oscuro);
-  border-radius: 8px;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgb(36, 24, 24);
+/* Sección del total de productos */
+.totalProducts {
+  margin-top: 20px; /* Espacio encima del total */
+  padding: 10px; /* Espaciado interno */
+  background-color: #070F2B; /* Fondo del total */
+  border-radius: 8px; /* Bordes redondeados */
+  color: #eeeeee; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  font-size: 1.5em; /* Tamaño de fuente aumentado */
+  width: calc(100% - 40px); /* Ancho reducido */
+  max-width: 800px; /* Limitar el ancho máximo */
+  margin: 0 auto; /* Centrar el contenedor */
 }
 
 .total_result {
-  font-size: 18px;
-  color: var(--negro);
+  font-weight: bold; /* Resaltar el total */
 }
 
-.buy {
-  background-color: var(--negro);
-  color: var(--gris-claro);
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
+/* Centrado de texto */
+.text {
+  margin-top: 20%;
+  text-align: center;
+}
+
+/* Contenedor del producto */
+.product_conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* Espacio entre los elementos */
+  margin: 10px 0; /* Separar productos */
+  padding: 10px;
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Botones de cantidad */
+.product_quanty {
+  background-color: #1b1a55; /* Color del fondo */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 8px 12px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor pointer */
+  transition: background-color 0.3s ease; /* Animación al pasar el cursor */
+}
+
+/* Hover para botones de cantidad */
+.product_quanty:hover {
+  background-color: #070f2b; /* Fondo más oscuro en hover */
+}
+
+/* Cantidad de productos */
+.product_number {
   font-size: 16px;
-  font-family: var(--font-family);
+  font-weight: bold;
+  color: #070f2b;
+  padding: 0 10px;
+}
+
+/* Botón de eliminar */
+.product_delete {
+  background-color: #ff4c4c; /* Fondo rojo */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 8px 12px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+/* Hover para botón eliminar */
+.product_delete:hover {
+  background-color: #ff1a1a; /* Fondo más oscuro en hover */
+}
+
+/* Botón de Comprar */
+.buy {
+  background-color: #00adb5; /* Fondo */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 12px 20px; /* Espaciado interno */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+}
+
+/* Hover para botón Comprar */
 .buy:hover {
-  background-color: var(--gris-oscuro);
+  background-color: #02929c; /* Color más oscuro */
+  transform: scale(1.05); /* Aumenta ligeramente */
+}
+
+/* Activo para botón Comprar */
+.buy:active {
+  background-color: #007b82; /* Color más oscuro */
+  transform: scale(0.98); /* Disminuye ligeramente */
+}
+
+/* Contenedor del total */
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Fondo claro */
+  padding: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para el total calculado */
+.total_result {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333; /* Texto más oscuro */
+  display: flex;
+  align-items: center;
+}
+
+/* Botón dentro del total */
+.total_result button {
+  margin-left: 20px; /* Separar el botón del texto */
 }

@@ -3,10 +3,10 @@ import React from "react";
 import NavSearch from "@/components/NavSearch"; // Importa el componente NavSearch
 import Link from "next/link"; // Importa el componente Link de Next.js
 import { useState } from "react";
-import styles from "../styles/menu.module.css";
 import { RiAlignJustify } from "react-icons/ri";
 import { satoshi_medium } from "@/config/fonts";
 import useProductStore from "@/store/principal";
+import styles from "../styles/menu.module.css";
 
 
 /**
@@ -34,7 +34,7 @@ const Navbar: React.FC = (): JSX.Element => {
     <>
       <header className={styles.Cabezera}>
         <h1 className={styles.Cabezera_h1}>
-          <Link href="/" className={styles.Cabezera_a}>
+          <Link href="/" className={styles.Cabezera_b}>
             E-comerce
           </Link>
         </h1>

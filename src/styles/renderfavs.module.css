@@ -1,51 +1,79 @@
+/* Estilo del contenedor de los favoritos */
 .renderfav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  display: flex; /* Usar flexbox para alinear elementos */
+  align-items: center; /* Centrar verticalmente los elementos */
+  padding: 15px; /* Espaciado interno */
+  margin: 10px auto; /* Espaciado externo entre productos y centrar horizontalmente */
+  border: 1px solid #9290C3; /* Borde alrededor de cada producto */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #1B1A55; /* Color de fondo */
+  color: #eeeeee; /* Color del texto */
+  max-width: 400px; /* Ancho máximo del contenedor */
+  width: 100%; /* Hacer que el contenedor ocupe el 100% del ancho permitido */
 }
 
+/* Estilo de la tarjeta de cada producto */
 .renderfav_card {
-  background-color: var(--gris-claro);
-  border: 1px solid var(--gris-oscuro);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  max-width: 400px;
-  margin-bottom: 20px;
+  display: flex; /* Usar flexbox para alinear la imagen y la información */
+  flex: 1; /* Ocupa todo el espacio disponible */
 }
 
+/* Estilo para la imagen del producto */
+.renderfav img {
+  border-radius: 4px; /* Bordes redondeados para la imagen */
+}
+
+/* Estilo de la información del producto */
 .renderfav_info {
-  margin-top: 20px;
-  font-size: 16px;
-  color: var(--negro);
+  margin-left: 15px; /* Espacio entre la imagen y la información */
 }
 
+/* Estilo para el contenedor de los botones */
 .renderfav_buttons {
-  margin-top: 20px;
+  margin-top: 10px; /* Espacio superior para separar los botones de la información */
 }
 
+/* Estilo para los botones de agregar y eliminar */
 .renderfav_btn {
-  background-color: var(--negro);
-  color: var(--gris-claro);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 10px;
+  background-color: #00adb5; /* Color de fondo */
+  color: #eeeeee; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  margin-right: 10px; /* Espacio entre los botones */
 }
 
 .renderfav_btn:hover {
-  background-color: var(--gris-oscuro);
+  background-color: #00a19b; /* Color de fondo en hover */
 }
 
+/* Estilo para el enlace de volver */
 .back {
-  color: var(--negro);
-  margin-left: .9rem ;
-  margin-top: 1rem;
+  display: flex; /* Usar flexbox para centrar el icono */
+  align-items: center; /* Centrar verticalmente el icono */
+  margin-bottom: 15px; /* Espacio debajo del enlace */
+  color: #00adb5; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1.2em; /* Tamaño de fuente */
 }
 
-.back:hover {
-  color: var(--gris-oscuro);
+/* Estilo para el mensaje de alerta */
+.alert {
+  position: fixed; /* Posición fija para la alerta */
+  top: 20px; /* Espacio desde la parte superior */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajustar para centrar correctamente */
+  background-color: #00adb5; /* Color de fondo de la alerta */
+  color: #ffffff; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+  transition: opacity 0.3s ease; /* Transición suave para la aparición/desaparición */
+}
+
+.textFav{
+  margin-top: 20%;
+  text-align: center;
 }
